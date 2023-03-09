@@ -1,7 +1,7 @@
 {
-  "name": "server-side-rendering",
+  "name": "oba-server-side-rendering",
   "version": "1.0.0",
-  "description": "Ontwerp en ontwikkel een server-side website voor een opdrachtgever.",
+  "description": "My OBA server-side website voor de opdrachtgever Openbare Bibliotheek Amsterdam.",
   "main": "app.js",
   "type": "module",
   "directories": {
@@ -19,9 +19,9 @@
   "author": "M.J. Toufik <jalal.toufik@hva.nl>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/fdnd-task/server-side-rendering/issues"
+    "url": "https://github.com/fdnd-task/oba-server-side-rendering/issues"
   },
-  "homepage": "https://github.com/fdnd-task/server-side-rendering#readme",
+  "homepage": "https://github.com/fdnd-task/oba-server-side-rendering#readme",
   "dependencies": {
     "dotenv": "^16.0.3",
     "ejs": "^3.1.8",
@@ -30,6 +30,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jtoufik/server-side-rendering.git"
+    "url": "git+https://github.com/jtoufik/oba-server-side-rendering.git"
   }
 }
