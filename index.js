@@ -1,53 +1,42 @@
 import express from 'express'
 
-// Default url for member API call
-const url = 'https://whois.fdnd.nl/api/v1/squad/'
+const url = 'https://zoeken.oba.nl/api/v1'
 
 // Maak een nieuwe express app
 const app = express()
 
-// Set the view engine of the app to ejs
+// Stel in hoe we express gebruiken
 app.set('view engine', 'ejs')
-// Set the location of the views folder
 app.set('views', './views')
-// Set the location of the public folder with static files
 app.use(express.static('public'))
 
-// Route voor de index
+// Maak een route voor de index
 app.get('/', (request, response) => {
-  console.log(request.query.squad)
+  let BoekenURL = url + '/search/?q=boek&authorization=1e19898c87464e239192c8bfe422f280&refine=true&output=json'
 
-  let slug = request.query.squad || 'squad-a-2022'
-  let orderBy = request.query.orderBy || 'name'
-  let squadUrl = url + slug + '?orderBy=' + orderBy + '&direction=ASC'
-
-  fetchJson(squadUrl).then((data) => {
-    response.render('index', data)
-  })
+fetchJson(BoekenURL).then((data) => {
+  response.render('index', data)
+    console.log(data)
 })
 
-// // Tijdelijke fake data
-// const skill = ['Enthusiast', 'Mash-up Artist', 'Inventor', 'Wizard'];
-// data.squad.members.forEach(function(member) {
-//   if (!member.skill) {
-//     // Pak een random skill en zet deze in de member
-//     member.skill = skill[Math.floor(Math.random() * skill.length)]
-//   }
+})
+
+// app.get('/sprint', (request, response) => {
+//   let slug = request.query.sprintSlug || 'your-tribe'
+//   let sprintUrl = url + '/sprint/' + slug
+//   fetchJson(sprintUrl).then((data) => {
+//     // console.log(data)
+//     response.render('sprint', data)
+//   })
 // })
 
-// app.get('/', function (req, res) {
-
-//   // deep copy 
-//   // fuld way 
-//   // const filtered = JSON.parse(JSON.stringify(data))
-//   const filtered = structuredClone(data)
-
-//   if (req.query.skill) {
-//     filtered.squad.members = filtered.squad.members.filter((member) => member.skill == req.query.skills)
-//   }
-//   res.render('index', filtered)
+// app.get('/over', (request, response) => {
+//   response.render('over')
 // })
 
+// app.get('/contact', (request, response) => {
+//   response.render('contact')
+// })
 
 // Stel het poortnummer in en start express
 app.set('port', process.env.PORT || 8000)
@@ -65,4 +54,3 @@ async function fetchJson(url) {
     .then((response) => response.json())
     .catch((error) => error)
 }
-

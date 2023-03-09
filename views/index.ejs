@@ -1,7 +1,12 @@
 <%- include('./partials/head.ejs') %>
 
 <main>
-    <h5><%= squad.name %></h5>
+    <% results.forEach(result => { %>
+        <article>
+            <h5><%= result.titles %></h5>
+            <img src="<%= result.coverimages %>">
+        </article>
+    <% }) %>
 </main>
 
 <%- include('./partials/foot.ejs') %>
