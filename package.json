@@ -31,5 +31,6 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jtoufik/oba-server-side-rendering.git"
-  }
+  },
+  "devDependencies": {}
 }
