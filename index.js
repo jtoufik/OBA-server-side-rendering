@@ -18,25 +18,7 @@ fetchJson(BoekenURL).then((data) => {
   response.render('index', data)
     console.log(data)
 })
-
 })
-
-// app.get('/sprint', (request, response) => {
-//   let slug = request.query.sprintSlug || 'your-tribe'
-//   let sprintUrl = url + '/sprint/' + slug
-//   fetchJson(sprintUrl).then((data) => {
-//     // console.log(data)
-//     response.render('sprint', data)
-//   })
-// })
-
-// app.get('/over', (request, response) => {
-//   response.render('over')
-// })
-
-// app.get('/contact', (request, response) => {
-//   response.render('contact')
-// })
 
 // Stel het poortnummer in en start express
 app.set('port', process.env.PORT || 8000)
