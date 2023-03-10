@@ -1,0 +1,13 @@
+:root {
+    --transparant: #0000;
+    --shadow: .3rem;
+}
+
+* {
+box-sizing: border-box;
+}
+
+html {
+font-family: 'Cairo';  
+}
+

@@ -1,8 +1,8 @@
 {
   "name": "oba-server-side-rendering",
-  "version": "1.0.0",
-  "description": "My OBA server-side website voor de opdrachtgever Openbare Bibliotheek Amsterdam.",
-  "main": "app.js",
+  "version": "0.0.1",
+  "description": "> _Fork_ deze leertaak en ga aan de slag. Onderstaande outline ga je gedurende deze taak in jouw eigen GitHub omgeving uitwerken. De instructie vind je in: [docs/INSTRUCTIONS.md](docs/INSTRUCTIONS.md)",
+  "main": "index.js",
   "type": "module",
   "directories": {
     "doc": "docs"
@@ -11,26 +11,23 @@
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jtoufik/OBA-server-side-rendering.git"
+  },
   "keywords": [
     "node",
     "express",
     "ejs"
   ],
-  "author": "M.J. Toufik <jalal.toufik@hva.nl>",
+  "author": "Jalal Toufik <jalal.toufik@hva.nl>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/fdnd-task/oba-server-side-rendering/issues"
+    "url": "https://github.com/jtoufik/OBA-server-side-rendering/issues"
   },
-  "homepage": "https://github.com/fdnd-task/oba-server-side-rendering#readme",
+  "homepage": "https://github.com/jtoufik/OBA-server-side-rendering#readme",
   "dependencies": {
-    "dotenv": "^16.0.3",
     "ejs": "^3.1.8",
-    "express": "^4.18.2",
-    "node": "^19.6.1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jtoufik/oba-server-side-rendering.git"
-  },
-  "devDependencies": {}
+    "express": "^4.18.2"
+  }
 }
