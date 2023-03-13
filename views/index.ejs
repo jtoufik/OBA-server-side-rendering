@@ -1,12 +1,31 @@
 <%- include('./partials/head.ejs') %>
 
 <main>
-    <% results.forEach(result => { %>
-        <article>
-            <h5><%= result.titles %></h5>
-            <img src="<%= result.coverimages %>">
-        </article>
-    <% }) %>
+    <section>
+        <h2> Waar bent je naar opzoek:</h2>
+        <div>
+            <input type="text" placeholder="Ik zoek.."> 
+            <button>
+                Zoek <span class="material-symbols-outlined">
+                    arrow_right
+                    </span>
+            </button>
+        </div>
+    </section>
+
+    <section>
+        <a href="https://www.oba.nl/service/word-lid.html"> </a>
+    </section>
+
+    <section>
+        <% results.forEach(result => { %>
+            <article>
+                <h5><%= result.titles %></h5>
+                <img src="<%= result.coverimages %>">
+            </article>
+        <% }) %>
+    </section>
+
 </main>
 
 <%- include('./partials/foot.ejs') %>
