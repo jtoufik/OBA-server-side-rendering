@@ -106,7 +106,7 @@ main > section, article {
 }
 
 /* Zoek balk */
-main > section > h2{
+section > h2{
     text-align: center;
     font-size: 22px;
     position: relative;
@@ -186,9 +186,9 @@ footer > nav{
     align-items: center;
 }
 
-footer > nav > ul:nth-of-type(3){
+/* footer > nav > ul:nth-of-type(3){
 
-}
+} */
 
 
 /* ====================== MEDIA QUERY'S ====================== */

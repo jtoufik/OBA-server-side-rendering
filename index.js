@@ -12,9 +12,9 @@ app.use(express.static('public'))
 
 // Maak een route voor de index
 app.get('/', (request, response) => {
-  let BoekenURL = url + '/search/?q=boek&authorization=1e19898c87464e239192c8bfe422f280&refine=true&output=json'
+  let BooksURL = url + '/search/?q=boek&authorization=1e19898c87464e239192c8bfe422f280&refine=true&output=json'
 
-fetchJson(BoekenURL).then((data) => {
+fetchJson(BooksURL).then((data) => {
   response.render('index', data)
     console.log(data)
 })
