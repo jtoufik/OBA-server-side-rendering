@@ -5,6 +5,7 @@
 
 <img width="1545" alt="Scherm­afbeelding 2023-03-17 om 10 59 58" src="https://user-images.githubusercontent.com/112856590/225873322-964f9c25-8f8b-4283-b3e4-ce343994d52f.png">
 
+## Mobile versie
 <img width="482" alt="Scherm­afbeelding 2023-03-17 om 11 09 55" src="https://user-images.githubusercontent.com/112856590/225875664-8a2af131-d15f-4966-995d-255c3f535ce3.png">
 
 ## Inhoudsopgave
