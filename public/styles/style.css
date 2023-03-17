@@ -26,28 +26,36 @@ ul{
 /* ===================== HEADER ===================== */
 
 header{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 1em;
+    padding: 1em 1em 0;
 }
 
-header > img:nth-of-type(1){
+header > section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header > section > img:nth-of-type(1){
     width: 4.5rem;
     height: 2.5rem;
 }
 
-header > img:nth-of-type(2){
+header > section > img:nth-of-type(2){
     position: relative;
-    top: .5em;
+    top: 1em;
 }
 
 header > a:nth-of-type(1){
-    position: absolute;
-    right: 2em;
-    top: 1em;
+    display: flex;
+    justify-content: flex-end;
     transition: all .2s ease-in-out;
+    position: relative;
+    bottom: 1em;
+    font-weight: bold;
+}
+
+header > a:nth-of-type(1):hover{
+color: var(--primary-color);
 }
 
 a:visited {
@@ -55,9 +63,8 @@ a:visited {
 }
 
 header > nav{
-    width: 90%;
-    position: relative;
-    top: 0.5em;
+    width: 100%;
+    font-weight: bold;
 }
 
 header > nav > ul{
@@ -79,7 +86,7 @@ header > nav > ul > li{
     transition: all .2s ease-in-out;
 }
 
-header > a:nth-of-type(1):hover, header > nav > ul > li:hover{
+header > nav > ul > li:hover{
     transform: scale(1.1);
     color: var(--primary-color);
 }
@@ -87,7 +94,7 @@ header > a:nth-of-type(1):hover, header > nav > ul > li:hover{
 /* ===================== MAIN ===================== */
 
 main{
-    width: 98%;
+    width: 96%;
     margin: 0 auto;
 }
 
@@ -101,7 +108,9 @@ main > section, article {
 /* Zoek balk */
 main > section > h2{
     text-align: center;
-    font-size: 18px;
+    font-size: 22px;
+    position: relative;
+    bottom: 0.6em;
 }
 
 main > section > div{
@@ -141,7 +150,7 @@ section:nth-of-type(2){
 }
 
 section:nth-of-type(2) > img{
-    width: 96%;
+    width: 100%;
     height: auto;
     display: block;
 }
@@ -186,18 +195,70 @@ footer > nav > ul:nth-of-type(3){
 
 /* Small screen 480px */
 @media (min-width: 30em) {
+    header > section > img:nth-of-type(1){
+        width: 6.5rem;
+        height: 3.5rem;
+    }
 
+    header > section > img:nth-of-type(2){  
+        min-width: 12em;
+    }
+
+    main > section > div > input{
+        width: 14em;
+    }
 }
 
 /* Medium screen 768px */
 @media (min-width: 48em) {
-    section:nth-of-type(2) > img{
-        width: 86%;
+
+    body{
+        width: 90%;
+        margin: 0 auto;
     }
+
+    header > section > img:nth-of-type(1){
+        width: 8.5rem;
+        height: 4.5rem;
+    }
+
+    header > section > img:nth-of-type(2){  
+        min-width: 14em;
+    }
+
+    main > section > div > input{
+        width: 20em;
+    }
+
+    section:nth-of-type(2) > img{
+        width: 90%;
+    }
+
 }
 
 /* Large screen 1120px */
 @media (min-width: 70em) {
+
+    body{
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    section:nth-of-type(2) > p{
+        max-width: 35em;
+    }
+
+    main > section > div > input{
+        width: 25em;
+    }
+
+    section:nth-of-type(2) > img{
+        width: 90%;
+    }
+}
+
+/* Extra Large screen 1400px */
+@media (min-width:88em) {
 
     body{
         width: 70%;
@@ -206,5 +267,13 @@ footer > nav > ul:nth-of-type(3){
 
     section:nth-of-type(2) > p{
         max-width: 35em;
+    }
+
+    main > section > div > input{
+        width: 25em;
+    }
+
+    section:nth-of-type(2) > img{
+        width: 90%;
     }
 }
